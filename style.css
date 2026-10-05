@@ -1,0 +1,122 @@
+body {
+    background-color: #F1EEE6;
+    margin: 0;
+}
+
+.nav {
+    display: flex;
+    position: fixed;
+    width: 100%;
+    top: 0;
+    background-color: #F1EEE6;
+    justify-content: flex-start;
+    border-bottom: 1px solid #999;
+}
+
+.main {
+    position: relative;
+}
+
+.logo {
+    margin-top: 1%;
+    margin-left: 1%;
+    flex-shrink: 0;
+    width: 50px;
+    height: 50px;
+}
+
+.tekskabinet1 {
+    margin-top: 20px;
+    flex-shrink: 0;
+    font-family: 'Righteous', cursive;
+    padding-left: 1.7%;
+    font-size: 15px;
+    color: #38BDF8;
+}
+
+.menu {
+   margin-top: 20px;
+   flex-shrink: 0;
+   font-family: 'Righteous', cursive;
+   color: #38BDF8; 
+}
+
+.tekskabinet2 {
+    font-family: 'Righteous', cursive;
+    font-size: 15px;
+    color: #1E3B8B;
+}
+
+.menu {
+    margin-left: auto;
+    margin-right: 51px;
+    display: flex;
+    gap: 50px;
+}
+
+.btn {
+    margin-right: 20px;
+    margin-top: 14px;
+    margin-bottom: 27px;
+    font-size: 15px;
+    font-family: 'Righteous', cursive;
+    color: #F1EEE6;
+    background: linear-gradient(135deg, #38BDF8, #1E3B8B);
+    border: none;
+    border-radius: 10px;
+    cursor: pointer;
+}
+
+.hero {
+    display: flex;
+    width: 100%;
+    min-height: 100vh;
+    height: 700px;
+    background-image: url("gambar/Background.png");
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    padding-top: 20px;
+    display: flex;
+}
+
+.hero h1 {
+    padding-top: 370px;
+    padding-left: 80px;
+}
+
+.heroh0 {
+    font-family: 'VT323', monospace;
+    font-size: 50px;
+    color: #F1EEE6;
+}
+
+.hero-content {
+    margin-left: 0px;
+    margin-bottom: 0px;
+}
+
+.heroh2 {
+    font-family: 'Righteous', cursive;
+    font-size: 59px;
+    color: #F1EEE6; 
+}
+
+.heroh3 {
+    font-family: 'Righteous', cursive;
+    font-size: 59px;
+    color: #F9CD1F; 
+}
+
+.btn1 {
+    margin-top: 0px;
+    margin-left: 80px;
+    font-size: 15px;
+    font-family: 'Righteous', cursive;
+    color: #F1EEE6;
+    background: linear-gradient(135deg, #38BDF8, #1E3B8B);
+    border: none;
+    border-radius: 10px;
+    padding: 10px 20px;
+    cursor: pointer;
+}
