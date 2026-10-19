@@ -25,11 +25,12 @@
             <a href='profil.html'>Profil</a>
             <a href='info.html'>Info</a>
             <a href='pengaduan.html'>Pengaduan</a>
-            <button class="hamburger" aria-label="Buka menu" aria-expanded="false" aria-controls="menu-utama">
-            <span></span>
-            <span></span>
-            <span></span>
         </div>
+        <button class="hamburger" aria-label="Buka menu" aria-expanded="false" aria-controls="menu-utama">
+            <span></span>
+            <span></span>
+            <span></span>
+        </button>
     </nav>
 
     <header>
@@ -83,7 +84,7 @@
                         <div class="label-baris">
                             <label for="isi"><i class="fa-solid fa-pen" aria-hidden="true"></i> Isi pengaduan</label>
                         </div>
-                        <textarea id="isi" name="isi" required placeholder="Ceritakan apa yang terjadi, kapan, dan apa harapanmu."></textarea>
+                        <textarea id="isi" name="isi" maxlength="255" required placeholder="Ceritakan apa yang terjadi, kapan, dan apa harapanmu."></textarea>
                         <small id="error-isi" class="pesan-error" aria-live="polite"></small>
                     </div>
 
