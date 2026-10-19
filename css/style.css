@@ -98,7 +98,7 @@ main {
     width: 100%;
     min-height: 100vh;
     height: 700px;
-    background-image: url("gambar/Background.png");
+    background-image: url("../gambar/Background.png");
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
@@ -112,7 +112,7 @@ main {
     height: 700px;
     padding-top: 20px;
     background-color: #060917;
-    background-image: url("gambar/npmrun.png");
+    background-image: url("../gambar/npmrun.png");
     background-position: center;
     background-repeat: no-repeat;
     background-size: 1000px;
@@ -228,7 +228,7 @@ main {
     grid-column: 3 / 5;
     grid-row: 1 ;
     background-color: #6D9BFF;
-    background-image: url("gambar/hasgdjas.png");
+    background-image: url("../gambar/hasgdjas.png");
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
@@ -238,7 +238,7 @@ main {
     grid-column: 3 / 5;
     grid-row: 2 ;
     background-color: #6D9BFF;
-    background-image: url("gambar/deklarasi.png");
+    background-image: url("../gambar/deklarasi.png");
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
@@ -248,7 +248,7 @@ main {
     grid-column: 3 / 5;
     grid-row: 3 ;
     background-color: #6D9BFF;
-    background-image: url("gambar/pengabdian.png");
+    background-image: url("../gambar/pengabdian.png");
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
@@ -308,26 +308,26 @@ strong {
     background-position: center;
 }
 
-.foto-ketum  { background-image: url("gambar/pengurus/bangwil.png"); }
-.foto-waketum { background-image: url("gambar/pengurus/nayla.png"); }
-.foto-sekretaris { background-image: url("gambar/pengurus/arif.png"); }
-.foto-bendahara { background-image: url("gambar/pengurus/ratu.png"); }
-.foto-zikra { background-image: url("gambar/pengurus/zikra.png"); }
-.foto-aku { background-image: url("gambar/pengurus/aku.png"); }
-.foto-tiya { background-image: url("gambar/pengurus/tiya.png"); }
-.foto-tian { background-image: url("gambar/pengurus/tian.png"); }
-.foto-gibran { background-image: url("gambar/pengurus/gibran.png"); }
-.foto-najmi { background-image: url("gambar/pengurus/najmi.png"); }
-.foto-ulan { background-image: url("gambar/pengurus/ulan.png"); }
-.foto-kania { background-image: url("gambar/pengurus/kania.png"); }
-.foto-lutfi { background-image: url("gambar/pengurus/lutfi.png"); }
-.foto-ami { background-image: url("gambar/pengurus/ami.png"); }
-.foto-putri { background-image: url("gambar/pengurus/putri.png"); }
-.foto-ihsan { background-image: url("gambar/pengurus/ihsan.png"); }
-.foto-daffa { background-image: url("gambar/pengurus/daffa.png"); }
-.foto-nadia { background-image: url("gambar/pengurus/nadia.png"); }
-.foto-febi { background-image: url("gambar/pengurus/febi.png"); }
-.foto-dinda { background-image: url("gambar/pengurus/dinda.png"); }
+.foto-ketum  { background-image: url("../gambar/pengurus/bangwil.png"); }
+.foto-waketum { background-image: url("../gambar/pengurus/nayla.png"); }
+.foto-sekretaris { background-image: url("../gambar/pengurus/arif.png"); }
+.foto-bendahara { background-image: url("../gambar/pengurus/ratu.png"); }
+.foto-zikra { background-image: url("../gambar/pengurus/zikra.png"); }
+.foto-aku { background-image: url("../gambar/pengurus/aku.png"); }
+.foto-tiya { background-image: url("../gambar/pengurus/tiya.png"); }
+.foto-tian { background-image: url("../gambar/pengurus/tian.png"); }
+.foto-gibran { background-image: url("../gambar/pengurus/gibran.png"); }
+.foto-najmi { background-image: url("../gambar/pengurus/najmi.png"); }
+.foto-ulan { background-image: url("../gambar/pengurus/ulan.png"); }
+.foto-kania { background-image: url("../gambar/pengurus/kania.png"); }
+.foto-lutfi { background-image: url("../gambar/pengurus/lutfi.png"); }
+.foto-ami { background-image: url("../gambar/pengurus/ami.png"); }
+.foto-putri { background-image: url("../gambar/pengurus/putri.png"); }
+.foto-ihsan { background-image: url("../gambar/pengurus/ihsan.png"); }
+.foto-daffa { background-image: url("../gambar/pengurus/daffa.png"); }
+.foto-nadia { background-image: url("../gambar/pengurus/nadia.png"); }
+.foto-febi { background-image: url("../gambar/pengurus/febi.png"); }
+.foto-dinda { background-image: url("../gambar/pengurus/dinda.png"); }
 
 .nama {
     display: block;
