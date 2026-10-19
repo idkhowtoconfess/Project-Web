@@ -1,0 +1,400 @@
+header {
+    display: block;
+    width: 100%;
+    min-height: 400px;
+    background-color: #114EE2;
+    padding-bottom: 60px;
+}
+
+header h1 {
+    margin: 0;
+    padding-top: 200px;
+    padding-left: 80px;
+    font-family: 'VT323', monospace;
+    font-size: 20px;
+    color: #F1EEE6;
+}
+
+header h2 {
+    margin: 16px 0 0;
+    padding: 0 80px;
+    font-family: 'Righteous', cursive;
+    font-size: 70px;
+    line-height: 1.1;
+    color: #F1EEE6;
+}
+
+.tentang {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 40px;
+    padding: 60px 80px;
+    background-color: #060917;
+    color: #F1EEE6;
+    font-family: 'Kulim Park', sans-serif;
+}
+
+.tentang-teks {
+    flex: 1;
+    max-width: 520px;
+}
+
+.tentang-teks h2 {
+    margin: 0 0 16px;
+    font-family: 'Righteous', cursive;
+    font-size: 48px;
+}
+
+.tentang-teks p {
+    margin: 0 0 16px;
+    line-height: 1.6;
+}
+
+.tentang-logo {
+    flex: 1;
+    display: flex;
+    justify-content: center;
+}
+
+.tentang-logo img {
+    max-width: 100%;
+    width: 320px;
+    height: auto;
+}
+
+@media (max-width: 700px) {
+    .tentang {
+        flex-direction: column;
+        padding: 40px 24px;
+    }
+}
+
+.card-visi {
+    grid-row: 1 / 4;
+}
+
+.card-misi {
+    grid-column: 3 / 5;
+    flex-direction: row;
+    align-items: center;
+    justify-content: flex-start;
+    gap: 20px;
+    background-color: #F9CD1F;
+    color: #0A1230;
+}
+
+.card-misi h3 {
+    margin: 0;
+    font-size: 28px;
+}
+
+@media (max-width: 800px) {
+    .card-visi,
+    .card-misi {
+        grid-column: 1 / 5 ;
+        grid-row: auto;
+    }    
+}
+
+.pengurus-halaman {
+    padding: 100px 40px 60px;
+    background-color: #0A1230;
+    color: #F1EEE6;
+    font-family: 'Kulim Park', sans-serif;
+    margin: 30px;
+}
+
+.pengurus-intro h2 {
+    margin: 0 0 16px;
+    font-size: 48px;
+    color: #F1EEE6;
+}
+
+.pengurus-intro p {
+    margin: 0;
+    line-height: 1.6;
+    color: #F1EEE6;
+}
+
+.kelompok {
+    margin-bottom: 56px;
+}
+
+.kelompok h3 {
+    margin: 0 0 20px;
+    padding-bottom: 8px;
+    border-bottom: 3px solid #F9CD1F;
+    font-family: 'Righteous', cursive;
+    font-size: 24px;
+    color: #F1EEE6;
+}
+
+.pengurus-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+    gap: 24px;
+}
+
+.berita-detail {
+    padding: 60px 40px;
+    color: #F1EEE6;
+    font-family: 'Kulim Park', sans-serif;
+    border-top: 3px solid #F1EEE6;
+}
+
+.detail-isi {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 32px;
+    align-items: center;
+}
+
+.detail-foto {
+    margin: 0;
+}
+
+.detail-foto img {
+    display: block;
+    width: 100%;
+    height: 280px;
+    object-fit: cover;
+}
+
+.detail-teks h2 {
+    margin: 8px 0 16px;
+    font-family: 'Righteous', cursive;
+    font-size: 32px;
+}
+
+.detail-teks p {
+    margin: 0 0 16px;
+    line-height: 1.6;
+}
+
+@media (max-width: 700px) {
+    .detail-isi {
+        grid-template-columns: 1fr;
+    }
+}
+
+.pengaduan {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 70px 40px 0;
+    box-sizing: border-box;
+    color: #F1EEE6;
+    font-family: 'Kulim Park', sans-serif;
+}
+
+.pengaduan-isi {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 40px;
+    align-items: flex-start;
+}
+
+/* ---------- Kartu formulir ---------- */
+
+.form-kartu {
+    flex: 999 1 520px;
+    min-width: 0;
+    padding: 36px;
+    border-radius: 10px;
+    background-color: #16215A;
+    box-sizing: border-box;
+}
+
+.form-kartu .heroh2 {
+    margin: 0 0 24px;
+    font-size: 40px;
+}
+
+#form-pengaduan {
+    display: flex;
+    flex-direction: column;
+    gap: 22px;
+}
+
+.baris {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 22px;
+}
+
+.grup {
+    flex: 1 1 220px;
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+    min-width: 0;
+}
+
+.form-kartu label {
+    font-family: 'VT323', monospace;
+    font-size: 22px;
+    color: #F9CD1F;
+}
+
+.form-kartu label.label-biasa {
+    font-family: 'Kulim Park', sans-serif;
+    font-size: 16px;
+    line-height: 1.5;
+    color: #F1EEE6;
+    cursor: pointer;
+}
+
+.label-baris {
+    display: flex;
+    justify-content: space-between;
+    align-items: baseline;
+}
+
+input[type="text"],
+input[type="tel"],
+input[type="url"],
+select,
+textarea {
+    width: 100%;
+    box-sizing: border-box;
+    padding: 12px 14px;
+    border: 1px solid #3A4466;
+    border-radius: 8px;
+    background-color: #0A1230;
+    color: #F1EEE6;
+    font-family: 'Kulim Park', sans-serif;
+    font-size: 16px;
+}
+
+textarea {
+    line-height: 1.5;
+    resize: vertical;
+}
+
+input::placeholder,
+textarea::placeholder {
+    color: #8A93B5;
+}
+
+select option {
+    background-color: #0A1230;
+    color: #F1EEE6;
+}
+
+input:focus,
+select:focus,
+textarea:focus,
+button:focus-visible,
+summary:focus-visible {
+    outline: 3px solid #F9CD1F;
+    outline-offset: 2px;
+}
+
+input:disabled {
+    opacity: 0.4;
+    cursor: not-allowed;
+}
+
+.form-kartu small {
+    font-size: 14px;
+    line-height: 1.5;
+    color: #B7C3E6;
+}
+
+.pesan-error {
+    color: #F9CD1F;
+    font-weight: 700;
+}
+
+.centang {
+    display: flex;
+    align-items: flex-start;
+    gap: 12px;
+    padding: 14px 16px;
+    border-radius: 8px;
+    background-color: #0A1230;
+}
+
+.centang input {
+    flex-shrink: 0;
+    width: 22px;
+    height: 22px;
+    margin: 0;
+    accent-color: #F9CD1F;
+    cursor: pointer;
+}
+
+.tombol-kirim {
+    align-self: flex-start;
+    display: inline-flex;
+    align-items: center;
+    gap: 10px;
+    padding: 14px 28px;
+    border: none;
+    border-radius: 8px;
+    background-color: #F9CD1F;
+    color: #0A1230;
+    font-family: 'Righteous', cursive;
+    font-size: 18px;
+    cursor: pointer;
+}
+
+.info-teks {
+    margin-top: 40px;
+}
+ 
+.info-teks h2 {
+    margin: 0 0 16px;
+    font-family: 'Righteous', cursive;
+    font-size: 28px;
+    font-weight: 400;
+}
+ 
+.info-teks p {
+    margin: 0 0 14px;
+    font-size: 16px;
+    line-height: 1.7;
+    color: #F1EEE6;
+}
+ 
+.info-teks b {
+    color: #F9CD1F;
+}
+
+@media (max-width: 700px) {
+    .pengaduan {
+        padding: 40px 20px 0;
+    }
+    .form-kartu {
+        padding: 24px;
+    }
+    .faq summary {
+        font-size: 20px;
+    }
+}
+
+.detail-foto.swiper {
+    margin: 0;
+    min-width: 0;
+    --swiper-navigation-color: #F9CD1F;
+    --swiper-navigation-size: 28px;
+}
+
+.form-kartu small.pesan-error {
+    color: #FF8A8F;
+    font-weight: 700;
+}
+
+.pesan-error:empty {
+    display: none;
+}
+
+.form-kartu .tidak-valid {
+    border-color: #FF8A8F;
+    outline: 2px solid #FF8A8F;
+    outline-offset: 2px;
+}
+
+#form-pengaduan > .grup {
+    flex: 0 0 auto;
+}

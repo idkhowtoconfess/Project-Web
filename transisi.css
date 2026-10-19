@@ -1,0 +1,114 @@
+html {
+    scroll-behavior: smooth;
+}
+
+.btn,
+.btn1,
+.btn2,
+.footer-btn,
+.footer-btn-garis,
+.tombol-kirim {
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.btn:hover,
+.btn1:hover,
+.btn2:hover,
+.footer-btn:hover,
+.footer-btn-garis:hover,
+.tombol-kirim:hover {
+    transform: translateY(-3px);
+}
+
+.btn:hover,
+.btn1:hover,
+.btn2:hover {
+    box-shadow: 0 6px 18px rgba(56, 189, 248, 0.45);
+}
+
+.tombol-kirim:hover {
+    box-shadow: 0 6px 18px rgba(249, 205, 31, 0.4);
+}
+
+.footer-btn:hover,
+.footer-btn-garis:hover {
+    box-shadow: 0 6px 0 rgba(10, 18, 48, 0.35);
+}
+
+.menu a {
+    position: relative;
+    text-decoration: none;
+}
+
+.menu a::after {
+    content: "";
+    position: absolute;
+    left: 0;
+    bottom: -2px;
+    width: 0;
+    height: 3px;
+    background-color: #1E3B8B;
+    transition: width 0.3s ease;
+}
+
+.menu a:hover::after {
+    width: 100%;
+}
+
+/* --- Card bento dan polaroid --- */
+.card,
+.polaroid {
+    transition: transform 0.3s ease;
+}
+
+.card:hover {
+    transform: scale(1.02);
+}
+
+.polaroid:hover {
+    transform: rotate(-2deg) translateY(-6px);
+}
+
+@keyframes kedip {
+    50% { opacity: 0; }
+}
+
+@keyframes naik-masuk {
+    from { opacity: 0; transform: translateY(30px); }
+    to   { opacity: 1; transform: translateY(0); }
+}
+
+.heroh0::after {
+    content: "|";
+    margin-left: 4px;
+    color: #F9CD1F;
+    animation: kedip 1s step-end infinite;
+}
+
+.hero h1 {
+    animation: naik-masuk 0.8s ease-out backwards;
+}
+
+.btn1 {
+    animation: naik-masuk 0.8s ease-out 0.4s backwards;
+}
+
+.btn2 {
+    animation: naik-masuk 0.8s ease-out 0.6s backwards;
+}
+
+.nav {
+    transition: box-shadow 0.3s ease;
+}
+
+.nav.bergeser {
+    box-shadow: 0 4px 14px rgba(56, 189, 248, 0.35);
+}
+
+.footer-kontak a:hover {
+    text-decoration: underline;
+}
+
+.berita-item h3 a:hover {
+    color: #F9CD1F;
+}

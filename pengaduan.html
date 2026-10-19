@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pengaduan | HMPS SI UIN IB</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="stylemenu.css">
+    <link rel="stylesheet" href="transisi.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Kulim+Park:ital,wght@0,200;0,300;0,400;0,600;0,700;1,200;1,300;1,400;1,600;1,700&family=Righteous&family=VT323&display=swap" rel="stylesheet">
+</head>
+<body>
+    <nav class="nav">
+        <img class="logo" src="gambar\logo_kabinet-removebg-preview.png" alt="Logo HMPS SI UIN IB">
+        <p class="tekskabinet1">HIMPUNAN MAHASISWA <br>
+            <span class="tekskabinet2">
+                SISTEM INFORMASI
+            </span></p>
+        <div class="menu">
+            <a href="index.html">Home</a>
+            <a href='profil.html'>Profil</a>
+            <a href='info.html'>Info</a>
+            <a href='pengaduan.html'>Pengaduan</a>
+            <button class="hamburger" aria-label="Buka menu" aria-expanded="false" aria-controls="menu-utama">
+            <span></span>
+            <span></span>
+            <span></span>
+        </div>
+    </nav>
+
+    <header>
+        <h1>P E N G A D U A N</h1>
+        <h2>Suarakan aspirasimu, kami dengarkan.</h2>
+    </header>
+
+    <main class="pengaduan">
+        <div class="pengaduan-isi">
+
+            <section class="form-kartu" aria-labelledby="judul-form">
+                <h2 id="judul-form" class="heroh2">Formulir pengaduan</h2>
+                <form id="form-pengaduan" action="#" method="post" novalidate>
+
+                    <div class="centang">
+                        <input type="checkbox" id="anonim" name="anonim">
+                        <label for="anonim" class="label-biasa">Kirim secara anonim</label>
+                    </div>
+
+                    <div class="baris">
+                        <div class="grup">
+                            <label for="nama"><i class="fa-solid fa-user" aria-hidden="true"></i> Nama</label>
+                            <input type="text" id="nama" name="nama" placeholder="Nama lengkap">
+                        </div>
+                        <div class="grup">
+                            <label for="nim"><i class="fa-solid fa-id-card" aria-hidden="true"></i> NIM</label>
+                            <input type="text" id="nim" name="nim" inputmode="numeric" placeholder="Nomor induk mahasiswa">
+                        </div>
+                    </div>
+
+                    <div class="baris">
+                        <div class="grup">
+                            <label for="angkatan"><i class="fa-solid fa-graduation-cap" aria-hidden="true"></i> Angkatan (BP)</label>
+                            <select id="angkatan" name="angkatan">
+                                <option value="" selected disabled>Pilih angkatan</option>
+                                <option value="26">BP 26</option>
+                                <option value="25">BP 25</option>
+                                <option value="24">BP 24</option>
+                                <option value="23">BP 23</option>
+                                <option value="22">BP 22</option>
+                            </select>
+                        </div>
+                        <div class="grup">
+                            <label for="whatsapp"><i class="fa-brands fa-whatsapp" aria-hidden="true"></i> Nomor WhatsApp</label>
+                            <input type="tel" id="whatsapp" name="whatsapp" inputmode="numeric" placeholder="08xxxxxxxxxx">
+                            <small id="error-whatsapp" class="pesan-error" aria-live="polite"></small>
+                        </div>
+                    </div>
+
+                    <div class="grup">
+                        <div class="label-baris">
+                            <label for="isi"><i class="fa-solid fa-pen" aria-hidden="true"></i> Isi pengaduan</label>
+                        </div>
+                        <textarea id="isi" name="isi" required placeholder="Ceritakan apa yang terjadi, kapan, dan apa harapanmu."></textarea>
+                        <small id="error-isi" class="pesan-error" aria-live="polite"></small>
+                    </div>
+
+                    <div class="grup">
+                        <label for="bukti"><i class="fa-solid fa-link" aria-hidden="true"></i> Link bukti</label>
+                        <input type="url" id="bukti" name="bukti" placeholder="https://drive.google.com/...">
+                        <small>Opsional. Unggah foto bukti ke Google Drive, atur akses "Siapa saja yang memiliki link", lalu tempel linknya di sini.</small>
+                        <small id="error-bukti" class="pesan-error" aria-live="polite"></small>
+                    </div>
+
+                    <div class="grup">
+                        <div class="centang">
+                            <input type="checkbox" id="setuju" name="setuju" required>
+                            <label for="setuju" class="label-biasa">Saya setuju data ini dipakai hanya untuk tindak lanjut pengaduan. <span class="wajib">wajib</span></label>
+                        </div>
+                        <small id="error-setuju" class="pesan-error" aria-live="polite"></small>
+                    </div>
+
+                    <button type="submit" class="tombol-kirim">
+                        <i class="fa-solid fa-paper-plane" aria-hidden="true"></i> Kirim pengaduan
+                    </button>
+                </form>
+            </section>
+
+        </div>
+
+        <section class="info-teks">
+            <h2 id="judul-info">Informasi</h2>
+            <p><b>Hasil peninjauan</b> akan dikirimkan melalui nomor WhatsApp yang kamu cantumkan di formulir. Kalau kolom nomor dikosongkan, pengaduanmu tetap kami terima, tetapi kami tidak bisa mengabarkan hasilnya.</p>
+            <p><b>Pengaduan anonim:</b> centang pilihan anonim di bagian atas formulir, maka nama dan NIM tidak ikut dikirim.</p>
+            <p><b>Bukti:</b> unggah foto ke Google Drive, atur akses "Siapa saja yang memiliki link", lalu tempel linknya di kolom "Link bukti".</p>
+            <p><b>Yang boleh diadukan:</b> masalah akademik, kegiatan HMPS, fasilitas, kepengurusan, maupun saran. Sampaikan dengan sopan dan jelas supaya mudah ditindaklanjuti.</p>
+        </section>
+    </main>
+
+
+
+
+    <footer class="footer">
+        <h2 class="footer-judul">Punya pertanyaan <br> atau aspirasi?</h2>
+
+        <div class="footer-tombol">
+            <a href="pengaduan.html" class="footer-btn">Isi formulir pengaduan</a>
+            <a href="profil.html#kontak" class="btn2">Kontak kami</a>
+        </div>
+
+        <address class="footer-kontak">
+            <ul>
+                <li><a href="mailto:hmpssi@example.com">Email</a></li>
+                <li><a href="#">Instagram</a></li>
+                <li><a href="#">YouTube</a></li>
+                <li><a href="#">TikTok</a></li>
+                <li><a href="#">WhatsApp</a></li>
+                </ul>
+        </address>
+
+        <p class="footer-copy">© 2026 HMPS Sistem Informasi UIN Imam Bonjol Padang · Kabinet Ekagrata</p>
+    </footer>
+<script src="script.js"></script>
+</body>
+</html>

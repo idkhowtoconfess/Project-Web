@@ -5,11 +5,12 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>HMPS SI UIN IB</title>
     <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="transisi.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Kulim+Park:ital,wght@0,200;0,300;0,400;0,600;0,700;1,200;1,300;1,400;1,600;1,700&family=Righteous&family=VT323&display=swap" rel="stylesheet">
 </head>
-<body style="background-color: #F1EEE6;">
+<body>
     
     <nav class="nav">
         <img class="logo" src="gambar\logo_kabinet-removebg-preview.png" alt="Logo HMPS SI UIN IB">
@@ -17,13 +18,18 @@
             <span class="tekskabinet2">
                 SISTEM INFORMASI
             </span></p>
-        <div class="menu">
-            <a href="#">Home</a>
-            <a href='#'>Profil</a>
-            <a href='#'>Info</a>
-            <a href='#'>Kontak</a>
+        <div class="menu" id="menu-utama">
+            <a href="index.html">Home</a>
+            <a href='profil.html'>Profil</a>
+            <a href='info.html'>Info</a>
+            <a href='pengaduan.html'>Pengaduan</a>
         </div>
-        <button class="btn">Pengaduan > </button>
+
+        <button class="hamburger" aria-label="Buka menu" aria-expanded="false" aria-controls="menu-utama">
+            <span></span>
+            <span></span>
+            <span></span>
+        </button>
     </nav>
 
     <main>
@@ -31,16 +37,148 @@
 
             <div class="hero-content">
                 <h1>
-                    <span class="heroh0">Welcome To</span> <br>
-                    <span class="heroh2">System Information </span>
-                    <span class="heroh3">Student <br> Association</span>
+                    <span class="heroh0">Hello, World!</span> <br>
+                    <span class="heroh2">Initializing Our Future </span>
+                    <span class="heroh3"> With <br> Kabinet Ekagrata</span>
                 </h1>
 
-                <button class="btn1">Lebih banyak >></button>
+                <a href="profil.html" class="btn1">Kenali Kami >></a>
+                <a href="profil.html#kontak" class="btn2">Hubungi Kami >></a>
             </div>
 
         </section>
+
+        <section class="hero2"></section>
+        <div class="pembatasmrg">
+            <span>KABINET EKAGRATA • HMPS SI UIN IB • KABINET EKAGRATA • HMPS SI UIN IB • KABINET EKAGRATA • HMPS SI UIN IB •</span>
+        </div>
+
+        <section style="margin: 30px;">
+            <header>
+                <h2 class="heroh2" style="margin-top: 150px;"> Sekilas tentang kami</h2>
+                <p>Ringkasan HMPS SI dalam satu layar.</p>
+            </header>
+
+            <div class="grid">
+                <article class="card card-utama">
+                    <h3>Berperan sebagai wadah mahasiswa Sistem Informasi</h3>
+                    <pre style="font-size: 18px;"><i>"Namun lebih dari wadah, kami menjadi ruang <br> akselerasi yang mengolah teori menjadi aksi."</i></pre>
+                </article>
+
+                <figure class="card card-foto">
+                    <figcaption>ARAK-ARAKAH WISUDAWAN</figcaption>
+                </figure>
+
+                <figure class="card card-foto1">
+                    <figcaption>DEKLARASI PENOLAKAN LGBT</figcaption>
+                </figure>
+
+                <figure class="card card-foto2">
+                    <figcaption>PENGABDIAN KE PESANTREN</figcaption>
+                </figure>
+
+                <article class="card card-proker">
+                    <strong>20+</strong>
+                    <span style="font-family: VT323;">Program Kerja</span>
+                </article>
+
+                <article class="card card-angka">
+                    <strong>6</strong>
+                    <span style="font-family: VT323;">divisi</span>
+                </article>
+            </div>
+
+        </section>
+
+        <section style="margin: 30px;">
+            <h2 class="heroh2" style="margin-top: 150px;">Pengurus</h2>
+            <div class="pengurus-grid">
+                <div class="polaroid">
+                <div class="foto foto-ketum"></div>
+                    <span class="nama">Willy Ridnaldi</span>
+                    <span class="jabatan">Ketua Umum</span>
+            </div>
+
+            <div class="pengurus-grid">
+            <div class="polaroid">
+                <div class="foto foto-waketum"></div>
+                    <span class="nama">Nayla Wulan Sari</span>
+                    <span class="jabatan">Wakil Ketua</span>
+                </div>
+            </div>
+            <div class="pengurus-grid">
+            <div class="polaroid">
+                <div class="foto foto-bendahara"></div>
+                    <span class="nama">Ratu Aisyah</span>
+                    <span class="jabatan">Bendahara Umum</span>
+                </div>
+            </div>
+            <div class="pengurus-grid">
+            <div class="polaroid">
+                <div class="foto foto-sekretaris"></div>
+                    <span class="nama">Arif Aryaguna</span>
+                    <span class="jabatan">Sekretaris Umum</span>
+                </div>
+            </div>
+        </section>
+
+        <a href="profil.html#pengurus" class="link-garis">Lihat semua pengurus</a>
+
+        <section class="berita">
+            <header>
+                <h2 class="heroh2">Berita terbaru</h2>
+                <p>Kabar dan dokumentasi kegiatan HMPS SI.</p>
+            </header>
+
+            <ul class="berita-list">
+                <li class="berita-item">
+                    <time class="berita-tanggal" datetime="2026-10-14">14 Okt 2026</time>
+                    <h3>Seminar AMD Tech Gen</h3>
+                    <span class="berita-tag">Kegiatan</span>
+                </li>
+
+                <li class="berita-item">
+                    <time class="berita-tanggal" datetime="2026-10-01">01 Okt 2026</time>
+                    <h3>Webinar Lecture Series</h3>
+                    <span class="berita-tag">Kegiatan</span>
+                </li>
+
+                <li class="berita-item">
+                    <time class="berita-tanggal" datetime="2026-09-25">25 Sept 2026</time>
+                    <h3>Pengumuman Beasiswa Rajawali</h3>
+                    <span class="berita-tag">Pengumuman</span>
+                </li>
+
+                
+            </ul>
+
+            
+        </section>
+        <a href="info.html" class="link-garis">Semua berita dan galeri</a>
+
     </main>
-    
+
+    <footer class="footer">
+        <h2 class="footer-judul">Punya pertanyaan <br> atau aspirasi?</h2>
+
+        <div class="footer-tombol">
+            <a href="pengaduan.html" class="footer-btn">Isi formulir pengaduan</a>
+            <a href="profil.html#kontak" class="btn2">Kontak kami</a>
+        </div>
+
+        <address class="footer-kontak">
+            <ul>
+                <li><a href="mailto:hmpssi@example.com">Email</a></li>
+                <li><a href="#">Instagram</a></li>
+                <li><a href="#">YouTube</a></li>
+                <li><a href="#">TikTok</a></li>
+                <li><a href="#">WhatsApp</a></li>
+                </ul>
+        </address>
+
+        <p class="footer-copy">© 2026 HMPS Sistem Informasi UIN Imam Bonjol Padang · Kabinet Ekagrata</p>
+    </footer>
+
+<script src="script.js"></script>    
 </body>
 </html>
