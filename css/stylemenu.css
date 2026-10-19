@@ -398,3 +398,27 @@ input:disabled {
 #form-pengaduan > .grup {
     flex: 0 0 auto;
 }
+
+.toast {
+    position: fixed;
+    left: 50%;
+    bottom: 30px;
+    transform: translate(-50%, 20px);
+    max-width: 90%;
+    padding: 14px 24px;
+    border-radius: 8px;
+    background-color: #F9CD1F;
+    color: #0A1230;
+    font-family: 'Kulim Park', sans-serif;
+    font-weight: 700;
+    text-align: center;
+    opacity: 0;
+    pointer-events: none;
+    transition: opacity 0.3s, transform 0.3s;
+    z-index: 2000;
+}
+
+.toast.tampil {
+    opacity: 1;
+    transform: translate(-50%, 0);
+}

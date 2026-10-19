@@ -4,10 +4,10 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Pengaduan | HMPS SI UIN IB</title>
-    <link rel="stylesheet" href="css\style.css">
-    <link rel="stylesheet" href="css\stylemenu.css">
-    <link rel="stylesheet" href="css\transisi.css">
-    <link rel="stylesheet" href="css\mobile.css">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/stylemenu.css">
+    <link rel="stylesheet" href="css/transisi.css">
+    <link rel="stylesheet" href="css/mobile.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -16,18 +16,18 @@
 <body>
     <nav class="nav">
         <a style="display: contents; text-decoration: none;" href="index.html">
-            <img class="logo" src="gambar\logo_kabinet-removebg-preview.png" alt="Logo HMPS SI UIN IB">
+            <img class="logo" src="gambar/logo_kabinet-removebg-preview.png" alt="Logo HMPS SI UIN IB">
             <p class="tekskabinet1">HIMPUNAN MAHASISWA <br>
-                <span class="tekskabinet2">
-                    SISTEM INFORMASI
-                </span></p>
-            <div class="menu" id="menu-utama">
-                <a href="index.html">Home</a>
-                <a href='profil.html'>Profil</a>
-                <a href='info.html'>Info</a>
-                <a href='pengaduan.html'>Pengaduan</a>
-            </div>
+                <span class="tekskabinet2">SISTEM INFORMASI</span></p>
         </a>
+
+        <div class="menu" id="menu-utama">
+            <a href="index.html">Home</a>
+            <a href='profil.html'>Profil</a>
+            <a href='info.html'>Info</a>
+            <a href='pengaduan.html'>Pengaduan</a>
+        </div>
+
         <button class="hamburger" aria-label="Buka menu" aria-expanded="false" aria-controls="menu-utama">
             <span></span>
             <span></span>
@@ -86,8 +86,8 @@
                         <div class="label-baris">
                             <label for="isi"><i class="fa-solid fa-pen" aria-hidden="true"></i> Isi pengaduan</label>
                         </div>
-                        <textarea id="isi" name="isi" maxlength="500" required placeholder="Ceritakan apa yang terjadi, kapan, dan apa harapanmu."></textarea>
-                        <small id="error-isi" class="pesan-error" aria-live="polite"></small>
+                        <textarea id="isi" name="isi" rows="6" placeholder="Ceritakan apa yang terjadi, kapan, dan apa harapanmu."></textarea>
+                        <small id="error-isi" class="pesan-error"></small>
                     </div>
 
                     <div class="grup">
@@ -100,7 +100,7 @@
                     <div class="grup">
                         <div class="centang">
                             <input type="checkbox" id="setuju" name="setuju" required>
-                            <label for="setuju" class="label-biasa">Saya setuju data ini dipakai hanya untuk tindak lanjut pengaduan. <span class="wajib">wajib</span></label>
+                            <label for="setuju" class="label-biasa">Saya setuju data ini dipakai hanya untuk tindak lanjut pengaduan.</label>
                         </div>
                         <small id="error-setuju" class="pesan-error" aria-live="polite"></small>
                     </div>
@@ -142,6 +142,7 @@
 
         <p class="footer-copy">© 2026 HMPS Sistem Informasi UIN Imam Bonjol Padang · Kabinet Ekagrata</p>
     </footer>
+<div id="toast" class="toast"></div>
 <script src="js\script.js"></script>
 </body>
 </html>

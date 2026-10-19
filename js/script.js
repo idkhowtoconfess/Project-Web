@@ -1,96 +1,117 @@
-// ===== 1. Bayangan navbar saat di-scroll (semua halaman) =====
+// ============================================
+// BAGIAN A: MENGAMBIL ELEMEN DARI HTML
+// ============================================
 const nav = document.querySelector('.nav');
-
-function aturBayangan() {
-    if (nav) nav.classList.toggle('bergeser', window.scrollY > 10);
-}
-
-aturBayangan();
-window.addEventListener('scroll', aturBayangan);
-
-
-// ===== 2. Menu hamburger (semua halaman) =====
 const hamburger = document.querySelector('.hamburger');
 
-if (hamburger && nav) {
-    hamburger.addEventListener('click', () => {
-        const terbuka = nav.classList.toggle('terbuka');
-        hamburger.setAttribute('aria-expanded', terbuka);
-        hamburger.setAttribute('aria-label', terbuka ? 'Tutup menu' : 'Buka menu');
-    });
+const cekAnonim = document.getElementById('anonim');
+const kolomNama = document.getElementById('nama');
+const kolomNim = document.getElementById('nim');
+
+const form = document.getElementById('form-pengaduan');
+const kolomIsi = document.getElementById('isi');
+const pesanError = document.getElementById('error-isi');
+const toast = document.getElementById('toast');
+
+
+// ============================================
+// FITUR 1: Bayangan navbar saat halaman di-scroll
+// ============================================
+function aturBayangan() {
+    if (window.scrollY > 10) {
+        nav.classList.add('bergeser');
+    } else {
+        nav.classList.remove('bergeser');
+    }
+}
+
+window.addEventListener('scroll', aturBayangan);
+aturBayangan();
+
+
+// ============================================
+// FITUR 2: Buka dan tutup menu hamburger
+// ============================================
+function bukaTutupMenu() {
+    nav.classList.toggle('terbuka');
+}
+
+if (hamburger) {
+    hamburger.addEventListener('click', bukaTutupMenu);
 }
 
 
-// ===== 3. Halaman pengaduan: pilihan anonim =====
-const anonim = document.querySelector('#anonim');
-const nama = document.querySelector('#nama');
-const nim = document.querySelector('#nim');
+// ============================================
+// FITUR 3: Pilihan anonim (nama dan NIM dikunci)
+// ============================================
+function aturAnonim() {
+    if (cekAnonim.checked) {
+        kolomNama.disabled = true;
+        kolomNim.disabled = true;
+        kolomNama.value = '';
+        kolomNim.value = '';
+    } else {
+        kolomNama.disabled = false;
+        kolomNim.disabled = false;
+    }
+}
 
-if (anonim && nama && nim) {
-    anonim.addEventListener('change', () => {
-        nama.disabled = anonim.checked;
-        nim.disabled = anonim.checked;
-
-        if (anonim.checked) {
-            nama.value = '';
-            nim.value = '';
-        }
-    });
+if (cekAnonim) {
+    cekAnonim.addEventListener('change', aturAnonim);
 }
 
 
-// ===== 4. Halaman pengaduan: validasi dan pemberitahuan =====
-const form = document.querySelector('#form-pengaduan');
+// ============================================
+// FITUR 4: Validasi form dan pemberitahuan
+// ============================================
+function tampilkanNotifikasi(teks) {
+    toast.textContent = teks;
+    toast.classList.add('tampil');
+    setTimeout(sembunyikanNotifikasi, 4000);
+}
+
+function sembunyikanNotifikasi() {
+    toast.classList.remove('tampil');
+}
+
+function hapusError() {
+    pesanError.textContent = '';
+    pesanError.style.display = 'none';
+    kolomIsi.classList.remove('tidak-valid');
+}
+
+function kirimForm(event) {
+    event.preventDefault();
+
+    // Hanya kolom isi yang wajib
+    if (kolomIsi.value.trim() === '') {
+        pesanError.textContent = 'Isi pengaduan wajib diisi.';
+        pesanError.style.display = 'block';
+        pesanError.style.color = '#ff6b6b';
+        kolomIsi.classList.add('tidak-valid');
+        kolomIsi.focus();
+        return;
+    }
+
+    // Kalau lolos
+    tampilkanNotifikasi('Pengaduan terkirim. Terima kasih!');
+    form.reset();
+    kolomNama.disabled = false;
+    kolomNim.disabled = false;
+}
 
 if (form) {
-    const isi = document.querySelector('#isi');
-    const errorIsi = document.querySelector('#error-isi');
-    const toast = document.querySelector('#toast');
-
-    // Menampilkan pemberitahuan kecil selama 4 detik
-    function tampilkanToast(teks) {
-        if (!toast) {
-            alert(teks);
-            return;
-        }
-        toast.textContent = teks;
-        toast.classList.add('tampil');
-        setTimeout(() => toast.classList.remove('tampil'), 4000);
-    }
-
-    // Menampilkan atau menghapus pesan merah di bawah kolom isi
-    function aturErrorIsi(pesan) {
-        if (errorIsi) errorIsi.textContent = pesan;
-        isi.classList.toggle('tidak-valid', pesan !== '');
-    }
-
-    // Pesan merah hilang begitu pengunjung mulai mengetik
-    isi.addEventListener('input', () => aturErrorIsi(''));
-
-    form.addEventListener('submit', (e) => {
-        e.preventDefault(); // cegah halaman reload
-
-        // Satu-satunya yang wajib: isi pengaduan
-        if (isi.value.trim() === '') {
-            aturErrorIsi('Isi pengaduan wajib diisi.');
-            isi.focus();
-            return;
-        }
-
-        // Lolos validasi
-        tampilkanToast('Pengaduan terkirim. Terima kasih!');
-        form.reset();
-        if (nama) nama.disabled = false;
-        if (nim) nim.disabled = false;
-    });
+    form.addEventListener('submit', kirimForm);
+    kolomIsi.addEventListener('input', hapusError);
 }
 
-// ===== 7. Halaman info: slider foto per berita (Swiper) =====
+
+// ============================================
+// BONUS: library (hapus bagian ini kalau tidak pakai Swiper / AOS)
+// ============================================
 if (typeof Swiper !== 'undefined') {
-    document.querySelectorAll('.foto-swiper').forEach((el) => {
+    document.querySelectorAll('.foto-swiper').forEach(function (el) {
         new Swiper(el, {
-            watchOverflow: true,
-            grabCursor: true,
             pagination: { el: el.querySelector('.swiper-pagination'), clickable: true },
             navigation: {
                 nextEl: el.querySelector('.swiper-button-next'),
@@ -100,7 +121,6 @@ if (typeof Swiper !== 'undefined') {
     });
 }
 
-// ===== 9. Animasi saat di-scroll (AOS) =====
 if (typeof AOS !== 'undefined') {
-    AOS.init({ duration: 700, once: true, offset: 80 });
+    AOS.init({ duration: 700, once: true });
 }
