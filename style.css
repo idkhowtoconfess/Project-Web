@@ -308,26 +308,26 @@ strong {
     background-position: center;
 }
 
-.foto-ketum  { background-image: url("pengurus/bangwil.png"); }
-.foto-waketum { background-image: url("pengurus/nayla.png"); }
-.foto-sekretaris { background-image: url("pengurus/arif.png"); }
-.foto-bendahara { background-image: url("pengurus/ratu.png"); }
-.foto-zikra { background-image: url("pengurus/zikra.png"); }
-.foto-aku { background-image: url("pengurus/aku.png"); }
-.foto-tiya { background-image: url("pengurus/tiya.png"); }
-.foto-tian { background-image: url("pengurus/tian.png"); }
-.foto-gibran { background-image: url("pengurus/gibran.png"); }
-.foto-najmi { background-image: url("pengurus/najmi.png"); }
-.foto-ulan { background-image: url("pengurus/ulan.png"); }
-.foto-kania { background-image: url("pengurus/kania.png"); }
-.foto-lutfi { background-image: url("pengurus/lutfi.png"); }
-.foto-ami { background-image: url("pengurus/ami.png"); }
-.foto-putri { background-image: url("pengurus/putri.png"); }
-.foto-ihsan { background-image: url("pengurus/ihsan.png"); }
-.foto-daffa { background-image: url("pengurus/daffa.png"); }
-.foto-nadia { background-image: url("pengurus/nadia.png"); }
-.foto-febi { background-image: url("pengurus/febi.png"); }
-.foto-dinda { background-image: url("pengurus/dinda.png"); }
+.foto-ketum  { background-image: url("gambar/pengurus/bangwil.png"); }
+.foto-waketum { background-image: url("gambar/pengurus/nayla.png"); }
+.foto-sekretaris { background-image: url("gambar/pengurus/arif.png"); }
+.foto-bendahara { background-image: url("gambar/pengurus/ratu.png"); }
+.foto-zikra { background-image: url("gambar/pengurus/zikra.png"); }
+.foto-aku { background-image: url("gambar/pengurus/aku.png"); }
+.foto-tiya { background-image: url("gambar/pengurus/tiya.png"); }
+.foto-tian { background-image: url("gambar/pengurus/tian.png"); }
+.foto-gibran { background-image: url("gambar/pengurus/gibran.png"); }
+.foto-najmi { background-image: url("gambar/pengurus/najmi.png"); }
+.foto-ulan { background-image: url("gambar/pengurus/ulan.png"); }
+.foto-kania { background-image: url("gambar/pengurus/kania.png"); }
+.foto-lutfi { background-image: url("gambar/pengurus/lutfi.png"); }
+.foto-ami { background-image: url("gambar/pengurus/ami.png"); }
+.foto-putri { background-image: url("gambar/pengurus/putri.png"); }
+.foto-ihsan { background-image: url("gambar/pengurus/ihsan.png"); }
+.foto-daffa { background-image: url("gambar/pengurus/daffa.png"); }
+.foto-nadia { background-image: url("gambar/pengurus/nadia.png"); }
+.foto-febi { background-image: url("gambar/pengurus/febi.png"); }
+.foto-dinda { background-image: url("gambar/pengurus/dinda.png"); }
 
 .nama {
     display: block;
@@ -518,7 +518,6 @@ strong {
 .hamburger span:nth-child(2) { top: 21px; }
 .hamburger span:nth-child(3) { top: 29px; }
 
-/* tiga garis berubah jadi X saat menu terbuka */
 .nav.terbuka .hamburger span:nth-child(1) { top: 21px; transform: rotate(45deg); }
 .nav.terbuka .hamburger span:nth-child(2) { opacity: 0; }
 .nav.terbuka .hamburger span:nth-child(3) { top: 21px; transform: rotate(-45deg); }
