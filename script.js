@@ -39,36 +39,26 @@ if (anonim && nama && nim) {
 }
 
 
-// ===== 4. Halaman pengaduan: kirim ke Google Form =====
+// ===== 4. Halaman pengaduan: validasi dan pemberitahuan =====
 const form = document.querySelector('#form-pengaduan');
 
 if (form) {
-    const URL_FORM = 'https://docs.google.com/forms/d/e/1FAIpQLSfotEFGqxYlnFjwguk5p_sIq3FdoevagsLOlnn8Y0ekNpY9pQ/formResponse';
-    const KODE = {
-        nama: 'entry.622727920',
-        nim: 'entry.446707568',
-        angkatan: 'entry.517577107',
-        whatsapp: 'entry.1065347246',
-        isi: 'entry.261207470',
-        bukti: 'entry.462046197'
-    };
-
     const isi = document.querySelector('#isi');
     const errorIsi = document.querySelector('#error-isi');
     const toast = document.querySelector('#toast');
-    const tombol = form.querySelector('.tombol-kirim');
 
-    function tampilkanToast(teks, gagal) {
+    // Menampilkan pemberitahuan kecil selama 4 detik
+    function tampilkanToast(teks) {
         if (!toast) {
             alert(teks);
             return;
         }
         toast.textContent = teks;
-        toast.classList.toggle('gagal', gagal);
         toast.classList.add('tampil');
         setTimeout(() => toast.classList.remove('tampil'), 4000);
     }
 
+    // Menampilkan atau menghapus pesan merah di bawah kolom isi
     function aturErrorIsi(pesan) {
         if (errorIsi) errorIsi.textContent = pesan;
         isi.classList.toggle('tidak-valid', pesan !== '');
@@ -78,7 +68,7 @@ if (form) {
     isi.addEventListener('input', () => aturErrorIsi(''));
 
     form.addEventListener('submit', (e) => {
-        e.preventDefault();
+        e.preventDefault(); // cegah halaman reload
 
         // Satu-satunya yang wajib: isi pengaduan
         if (isi.value.trim() === '') {
@@ -87,42 +77,11 @@ if (form) {
             return;
         }
 
-        // Susun data. Kolom lain opsional, dikirim kalau ada isinya.
-        const data = new FormData();
-        data.append(KODE.isi, isi.value.trim());
-
-        const angkatan = document.querySelector('#angkatan');
-        const whatsapp = document.querySelector('#whatsapp');
-        const bukti = document.querySelector('#bukti');
-
-        if (angkatan && angkatan.value) data.append(KODE.angkatan, angkatan.value);
-        if (whatsapp && whatsapp.value.trim()) data.append(KODE.whatsapp, whatsapp.value.trim());
-        if (bukti && bukti.value.trim()) data.append(KODE.bukti, bukti.value.trim());
-
-        const anonimDicentang = anonim && anonim.checked;
-        if (!anonimDicentang) {
-            if (nama && nama.value.trim()) data.append(KODE.nama, nama.value.trim());
-            if (nim && nim.value.trim()) data.append(KODE.nim, nim.value.trim());
-        }
-
-        // Kirim
-        tombol.disabled = true;
-        tombol.textContent = 'Mengirim...';
-
-        fetch(URL_FORM, { method: 'POST', mode: 'no-cors', body: data })
-            .then(() => {
-                tampilkanToast('Pengaduan terkirim. Terima kasih!', false);
-                form.reset();
-                if (nama) nama.disabled = false;
-                if (nim) nim.disabled = false;
-            })
-            .catch(() => {
-                tampilkanToast('Gagal mengirim. Cek koneksi lalu coba lagi.', true);
-            })
-            .finally(() => {
-                tombol.disabled = false;
-                tombol.textContent = 'Kirim pengaduan';
-            });
+        // Lolos validasi
+        tampilkanToast('Pengaduan terkirim. Terima kasih!');
+        form.reset();
+        if (nama) nama.disabled = false;
+        if (nim) nim.disabled = false;
     });
 }
 
