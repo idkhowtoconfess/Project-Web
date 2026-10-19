@@ -1,20 +1,14 @@
-/* mobile.css: tautkan PALING AKHIR di semua halaman */
-
-/* Jaring pengaman: halaman tidak boleh melebar ke samping */
 html,
 body {
     overflow-x: hidden;
 }
 
-/* Teks di dalam <pre> boleh turun baris */
 pre {
     white-space: pre-wrap;
     overflow-wrap: anywhere;
 }
 
 @media (max-width: 800px) {
-
-    /* ----- Navbar ----- */
     .nav {
         height: 70px;
         align-items: center;
@@ -75,7 +69,6 @@ pre {
         display: none;
     }
 
-    /* ----- Judul halaman (profil, info, pengaduan) ----- */
     body > header {
         min-height: 300px;
         padding-bottom: 40px;
@@ -90,7 +83,6 @@ pre {
         font-size: 36px;
     }
 
-    /* ----- Hero (home) ----- */
     .hero {
         height: auto;
         min-height: 100vh;
@@ -119,7 +111,6 @@ pre {
         background-size: contain;
     }
 
-    /* ----- Kartu bento (home) jadi satu kolom ----- */
     .grid {
         grid-template-columns: 1fr;
         grid-template-rows: none;
@@ -131,7 +122,9 @@ pre {
     .card-foto1,
     .card-foto2,
     .card-proker,
-    .card-angka {
+    .card-angka,
+    .cardvisi,
+    .cardmisi {
         grid-column: auto;
         grid-row: auto;
     }
@@ -146,7 +139,6 @@ pre {
         font-size: 26px;
     }
 
-    /* ----- Berita dan footer ----- */
     .berita {
         padding: 40px 20px;
     }
