@@ -126,46 +126,6 @@ if (form) {
     });
 }
 
-
-// ===== 5. Halaman info: filter berita berdasarkan tag =====
-const tombolFilter = document.querySelectorAll('.filter-tombol');
-const semuaBerita = document.querySelectorAll('.berita-detail');
-
-tombolFilter.forEach((tombol) => {
-    tombol.addEventListener('click', () => {
-        const tag = tombol.dataset.tag;
-
-        tombolFilter.forEach((t) => t.classList.toggle('aktif', t === tombol));
-
-        semuaBerita.forEach((berita) => {
-            const cocok = tag === 'semua' || berita.dataset.tag === tag;
-            berita.classList.toggle('sembunyi', !cocok);
-        });
-    });
-});
-
-
-// ===== 6. Halaman info: lightbox foto =====
-const lightbox = document.querySelector('#lightbox');
-const lightboxGambar = document.querySelector('#lightbox-gambar');
-
-if (lightbox && lightboxGambar) {
-    document.querySelectorAll('.detail-foto img').forEach((gambar) => {
-        gambar.addEventListener('click', () => {
-            lightboxGambar.src = gambar.src;
-            lightboxGambar.alt = gambar.alt;
-            lightbox.classList.add('terbuka');
-        });
-    });
-
-    const tutupLightbox = () => lightbox.classList.remove('terbuka');
-    lightbox.addEventListener('click', tutupLightbox);
-    document.addEventListener('keydown', (e) => {
-        if (e.key === 'Escape') tutupLightbox();
-    });
-}
-
-
 // ===== 7. Halaman info: slider foto per berita (Swiper) =====
 if (typeof Swiper !== 'undefined') {
     document.querySelectorAll('.foto-swiper').forEach((el) => {
@@ -180,22 +140,6 @@ if (typeof Swiper !== 'undefined') {
         });
     });
 }
-
-
-// ===== 8. Halaman home: slider berita (Swiper) =====
-if (typeof Swiper !== 'undefined' && document.querySelector('.berita-swiper')) {
-    new Swiper('.berita-swiper', {
-        slidesPerView: 1.1,
-        spaceBetween: 16,
-        grabCursor: true,
-        pagination: { el: '.berita-swiper .swiper-pagination', clickable: true },
-        breakpoints: {
-            700: { slidesPerView: 2 },
-            1100: { slidesPerView: 3 }
-        }
-    });
-}
-
 
 // ===== 9. Animasi saat di-scroll (AOS) =====
 if (typeof AOS !== 'undefined') {
