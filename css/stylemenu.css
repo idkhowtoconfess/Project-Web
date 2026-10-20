@@ -63,13 +63,6 @@ header h2 {
     height: auto;
 }
 
-@media (max-width: 700px) {
-    .tentang {
-        flex-direction: column;
-        padding: 40px 24px;
-    }
-}
-
 .card-visi {
     grid-row: 1 / 4;
 }
@@ -175,6 +168,11 @@ header h2 {
 @media (max-width: 700px) {
     .detail-isi {
         grid-template-columns: 1fr;
+    }
+
+    .tentang {
+        flex-direction: column;
+        padding: 40px 24px;
     }
 }
 
@@ -385,40 +383,6 @@ input:disabled {
     font-weight: 700;
 }
 
-.pesan-error:empty {
-    display: none;
-}
-
-.form-kartu .tidak-valid {
-    border-color: #FF8A8F;
-    outline: 2px solid #FF8A8F;
-    outline-offset: 2px;
-}
-
 #form-pengaduan > .grup {
     flex: 0 0 auto;
-}
-
-.toast {
-    position: fixed;
-    left: 50%;
-    bottom: 30px;
-    transform: translate(-50%, 20px);
-    max-width: 90%;
-    padding: 14px 24px;
-    border-radius: 8px;
-    background-color: #F9CD1F;
-    color: #0A1230;
-    font-family: 'Kulim Park', sans-serif;
-    font-weight: 700;
-    text-align: center;
-    opacity: 0;
-    pointer-events: none;
-    transition: opacity 0.3s, transform 0.3s;
-    z-index: 2000;
-}
-
-.toast.tampil {
-    opacity: 1;
-    transform: translate(-50%, 0);
 }

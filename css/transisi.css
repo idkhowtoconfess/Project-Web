@@ -2,7 +2,6 @@ html {
     scroll-behavior: smooth;
 }
 
-.btn,
 .btn1,
 .btn2,
 .footer-btn,
@@ -11,7 +10,6 @@ html {
     transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
-.btn:hover,
 .btn1:hover,
 .btn2:hover,
 .footer-btn:hover,
@@ -20,7 +18,6 @@ html {
     transform: translateY(-3px);
 }
 
-.btn:hover,
 .btn1:hover,
 .btn2:hover {
     box-shadow: 0 6px 18px rgba(56, 189, 248, 0.45);
@@ -55,7 +52,6 @@ html {
     width: 100%;
 }
 
-/* --- Card bento dan polaroid --- */
 .card,
 .polaroid {
     transition: transform 0.3s ease;

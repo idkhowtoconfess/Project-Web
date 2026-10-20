@@ -108,7 +108,6 @@ body {
 
     .grid {
         grid-template-columns: 1fr;
-        grid-template-rows: none;
         grid-auto-rows: minmax(150px, auto);
     }
 
@@ -147,5 +146,13 @@ body {
 
     .footer-judul {
         font-size: 32px;
+    }
+
+    .berita-item {
+        grid-template-columns: 1fr;
+        gap: 8px;
+    }
+    .berita-tag {
+        justify-self: start;
     }
 }

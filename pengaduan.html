@@ -21,7 +21,7 @@
                 <span class="tekskabinet2">SISTEM INFORMASI</span></p>
         </a>
 
-        <div class="menu" id="menu-utama">
+        <div class="menu">
             <a href="index.html">Home</a>
             <a href='profil.html'>Profil</a>
             <a href='info.html'>Info</a>
@@ -78,7 +78,6 @@
                         <div class="grup">
                             <label for="whatsapp"><i class="fa-brands fa-whatsapp" aria-hidden="true"></i> Nomor WhatsApp</label>
                             <input type="tel" id="whatsapp" name="whatsapp" inputmode="numeric" placeholder="08xxxxxxxxxx">
-                            <small id="error-whatsapp" class="pesan-error" aria-live="polite"></small>
                         </div>
                     </div>
 
@@ -87,14 +86,12 @@
                             <label for="isi"><i class="fa-solid fa-pen" aria-hidden="true"></i> Isi pengaduan</label>
                         </div>
                         <textarea id="isi" name="isi" rows="6" placeholder="Ceritakan apa yang terjadi, kapan, dan apa harapanmu."></textarea>
-                        <small id="error-isi" class="pesan-error"></small>
                     </div>
 
                     <div class="grup">
                         <label for="bukti"><i class="fa-solid fa-link" aria-hidden="true"></i> Link bukti</label>
                         <input type="url" id="bukti" name="bukti" placeholder="https://drive.google.com/...">
                         <small>Opsional. Unggah foto bukti ke Google Drive, atur akses "Siapa saja yang memiliki link", lalu tempel linknya di sini.</small>
-                        <small id="error-bukti" class="pesan-error" aria-live="polite"></small>
                     </div>
 
                     <div class="grup">
@@ -102,7 +99,6 @@
                             <input type="checkbox" id="setuju" name="setuju" required>
                             <label for="setuju" class="label-biasa">Saya setuju data ini dipakai hanya untuk tindak lanjut pengaduan.</label>
                         </div>
-                        <small id="error-setuju" class="pesan-error" aria-live="polite"></small>
                     </div>
 
                     <button type="submit" class="tombol-kirim">
@@ -142,7 +138,6 @@
 
         <p class="footer-copy">© 2026 HMPS Sistem Informasi UIN Imam Bonjol Padang · Kabinet Ekagrata</p>
     </footer>
-<div id="toast" class="toast"></div>
 <script src="js\script.js"></script>
 </body>
 </html>
