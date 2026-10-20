@@ -108,6 +108,7 @@ body {
 
     .grid {
         grid-template-columns: 1fr;
+        grid-template-rows: none;
         grid-auto-rows: minmax(150px, auto);
     }
 

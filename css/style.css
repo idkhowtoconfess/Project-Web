@@ -69,7 +69,7 @@ main {
 
 .mainsection {
     display: flex;
-    width: 100%;
+    width: 100vh;
     min-height: 100vh;
     height: 700px;
     background-color: #060917;
@@ -467,7 +467,6 @@ strong {
 .hamburger {
     display: none;
     position: relative;
-    flex-shrink: 0;
     width: 44px;
     height: 44px;
     padding: 0;

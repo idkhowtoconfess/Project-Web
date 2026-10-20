@@ -28,7 +28,7 @@
             <a href='pengaduan.html'>Pengaduan</a>
         </div>
 
-        <button class="hamburger" aria-label="Buka menu" aria-expanded="false" aria-controls="menu-utama">
+        <button class="hamburger">
             <span></span>
             <span></span>
             <span></span>
@@ -43,30 +43,30 @@
     <main class="pengaduan">
         <div class="pengaduan-isi">
 
-            <section class="form-kartu" aria-labelledby="judul-form">
+            <section class="form-kartu">
                 <h2 id="judul-form" class="heroh2">Formulir pengaduan</h2>
-                <form id="form-pengaduan" action="#" method="post" novalidate>
+                <form class="form-pengaduan">
 
                     <div class="centang">
-                        <input type="checkbox" id="anonim" name="anonim">
+                        <input type="checkbox" id="anonim">
                         <label for="anonim" class="label-biasa">Kirim secara anonim</label>
                     </div>
 
                     <div class="baris">
                         <div class="grup">
-                            <label for="nama"><i class="fa-solid fa-user" aria-hidden="true"></i> Nama</label>
-                            <input type="text" id="nama" name="nama" placeholder="Nama lengkap">
+                            <label for="nama"><i class="fa-solid fa-user"></i> Nama</label>
+                            <input type="text" placeholder="Nama lengkap">
                         </div>
                         <div class="grup">
-                            <label for="nim"><i class="fa-solid fa-id-card" aria-hidden="true"></i> NIM</label>
-                            <input type="text" id="nim" name="nim" inputmode="numeric" placeholder="Nomor induk mahasiswa">
+                            <label for="nim"><i class="fa-solid fa-id-card"></i> NIM</label>
+                            <input type="text" id="nim" inputmode="numeric" placeholder="Nomor induk mahasiswa">
                         </div>
                     </div>
 
                     <div class="baris">
                         <div class="grup">
-                            <label for="angkatan"><i class="fa-solid fa-graduation-cap" aria-hidden="true"></i> Angkatan (BP)</label>
-                            <select id="angkatan" name="angkatan">
+                            <label for="angkatan"><i class="fa-solid fa-graduation-cap"></i> Angkatan (BP)</label>
+                            <select>
                                 <option value="" selected disabled>Pilih angkatan</option>
                                 <option value="26">BP 26</option>
                                 <option value="25">BP 25</option>
@@ -76,33 +76,33 @@
                             </select>
                         </div>
                         <div class="grup">
-                            <label for="whatsapp"><i class="fa-brands fa-whatsapp" aria-hidden="true"></i> Nomor WhatsApp</label>
-                            <input type="tel" id="whatsapp" name="whatsapp" inputmode="numeric" placeholder="08xxxxxxxxxx">
+                            <label for="whatsapp"><i class="fa-brands fa-whatsapp"></i> Nomor WhatsApp</label>
+                            <input type="tel" inputmode="numeric" placeholder="08xxxxxxxxxx">
                         </div>
                     </div>
 
                     <div class="grup">
                         <div class="label-baris">
-                            <label for="isi"><i class="fa-solid fa-pen" aria-hidden="true"></i> Isi pengaduan</label>
+                            <label for="isi"><i class="fa-solid fa-pen"></i> Isi pengaduan</label>
                         </div>
                         <textarea id="isi" name="isi" rows="6" placeholder="Ceritakan apa yang terjadi, kapan, dan apa harapanmu."></textarea>
                     </div>
 
                     <div class="grup">
-                        <label for="bukti"><i class="fa-solid fa-link" aria-hidden="true"></i> Link bukti</label>
-                        <input type="url" id="bukti" name="bukti" placeholder="https://drive.google.com/...">
+                        <label for="bukti"><i class="fa-solid fa-link"></i> Link bukti</label>
+                        <input type="url" placeholder="https://drive.google.com/...">
                         <small>Opsional. Unggah foto bukti ke Google Drive, atur akses "Siapa saja yang memiliki link", lalu tempel linknya di sini.</small>
                     </div>
 
                     <div class="grup">
                         <div class="centang">
-                            <input type="checkbox" id="setuju" name="setuju" required>
+                            <input type="checkbox" required>
                             <label for="setuju" class="label-biasa">Saya setuju data ini dipakai hanya untuk tindak lanjut pengaduan.</label>
                         </div>
                     </div>
 
                     <button type="submit" class="tombol-kirim">
-                        <i class="fa-solid fa-paper-plane" aria-hidden="true"></i> Kirim pengaduan
+                        <i class="fa-solid fa-paper-plane"></i> Kirim pengaduan
                     </button>
                 </form>
             </section>
